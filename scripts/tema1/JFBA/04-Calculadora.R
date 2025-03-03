@@ -114,4 +114,57 @@ ls()
 rm(list = ls())
 
 
+class(3+2i)
+(3+2i)*5
+(3+2i)*(-1+3i)
+(3+2i)/(-1+3i)
+
+complex(real=pi, imaginary =sqrt(2)) -> z1
+z1
+
+sqrt(as.complex(-5))
+
+
+#Ejercicio 1
+
+# Definir el tiempo inicial con as.POSIXct
+inicio <- as.POSIXct("2018-01-01 00:00:00", tz = "UTC")
+final<- inicio + segundos_totales
+
+segundos_totales= 250*10^6
+
+# Definir el tiempo inicial
+
+final
+
+#Ejercicio 2
+
+resolver_ecuación<- function(a,b) {-b/a}
+
+# 5x + 3 = 0
+soluc1 = resolver_ecuación(5,3)
+soluc1
+# 7x + 4 = 18
+soluc2 = resolver_ecuación(7,-14)
+soluc2
+# x + 1 = 1
+soluc2 = resolver_ecuación(1,0)
+soluc2
+
+#Ejercicio 3
+# Expresión para calcular 3e - π
+resultado <- round(3 * exp(1) - pi, 3)
+resultado
+
+#Ejercicio 4
+
+c <-(2+3i)^2
+d <-(5+8i)
+div = Mod(c/d)
+resultado2= round(div,3)
+resultado2
+
+
+
+
 

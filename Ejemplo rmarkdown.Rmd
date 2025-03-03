@@ -1,11 +1,10 @@
 ---
 title: "Ejemplo de R Markdown"
 author: "Curso de Estadística Descriptiva"
-date: "21/12/2018"
+date: "`r Sys.Date()`"
 output:
   pdf_document: default
-  html_document:
-    df_print: paged
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -26,7 +25,7 @@ summary(cars)
 
 You can also embed plots, for example:
 
-```{r pressure, echo=TRUE}
+```{r pressure, echo=FALSE}
 plot(pressure)
 ```
 
@@ -34,32 +33,10 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 ### Nuestras propias chunks
 
-Vamos a calcular $\sqrt{2} - e^{-2}$:
-```{r miPrimeraChunk, echo = TRUE, eval = TRUE, results='markup'}
+Vamos a calcular $\sqrt2 - e^{-2}$
+```{r miPrimeraChunk}
 sqrt(2) - exp(-2)
-x = 1:5
-sqrt(x)
 ```
 
 
-```{r magic, message=TRUE, results='markup'}
-library(magic)
-magic(6)
-```
 
-Cuando queremos hacer la raíz cuadrada de dos, podemos hacerlo:
-
-- En \LaTeX, \(\sqrt{2}\)
-- En `R` haciendo `r sqrt(2)`
-- La frase completa: $\sqrt{2}=$ `r sqrt(2)`
-
-El número $\pi$ empieza por `r pi`.
-
-```{r prueba, results='hide', echo=FALSE}
-notas = c(3,5,7,7,9,10,4,7,9)
-media = mean(notas)
-n = length(notas)
-desv.tip = sd(notas)
-```
-
-Este año he hecho $n=$ `r n` examenes, con una media $\overline{x}=$ `r round(media,2)` y una desviación típica de $s=$ `r round(desv.tip,2)`.
